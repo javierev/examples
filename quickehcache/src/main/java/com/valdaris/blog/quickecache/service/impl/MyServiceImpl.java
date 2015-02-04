@@ -1,5 +1,6 @@
 package com.valdaris.blog.quickecache.service.impl;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import com.valdaris.blog.quickecache.service.MyService;
@@ -18,6 +19,7 @@ public class MyServiceImpl implements MyService {
 	/**
 	 * {@inheritDoc}
 	 */
+	@Cacheable(value="myCache")
 	public int timesCalled() {
 		return ++count;
 	}

@@ -9,16 +9,16 @@
     <diskStore path="java.io.tmpdir/QuickEhcache" />
 
     <defaultCache eternal="false" maxElementsInMemory="1000"
-        overflowToDisk="false" diskPersistent="false" timeToIdleSeconds="0"
-        timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU"/>
+        overflowToDisk="false" 
+        timeToLiveSeconds="600" memoryStoreEvictionPolicy="LRU">
+        <persistence strategy="localTempSwap" />
+    </defaultCache>
 
-    <cache name="wsCache" eternal="false"
-        maxElementsInMemory="100" overflowToDisk="false" diskPersistent="false"
+    <cache name="myCache" eternal="false"
+        maxElementsInMemory="100" 
         timeToIdleSeconds="0" timeToLiveSeconds="300"
-        memoryStoreEvictionPolicy="LRU" />
+        memoryStoreEvictionPolicy="LRU">
+        <persistence strategy="localTempSwap" />
+    </cache>
 
-    <cache name="daoCache" eternal="false"
-        maxElementsInMemory="100" overflowToDisk="false" diskPersistent="false"
-        timeToIdleSeconds="0" timeToLiveSeconds="300"
-        memoryStoreEvictionPolicy="LRU" />
 </ehcache>
