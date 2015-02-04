@@ -5,6 +5,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.valdaris.blog.quickecache.service.MyService;
 
+/**
+ * Quick Ehcache configuration example. Full explanation in
+ * http://blog.valdaris.com/post/ecache-configuration/
+ * 
+ * @author Javier Estevez (jestevez@valdaris.com)
+ *
+ */
 public class QuickEcache {
 	
 	public static void main(String[] args) {
